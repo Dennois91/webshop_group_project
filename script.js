@@ -15,8 +15,8 @@ function appendImages(data) {
         const element = document.createElement("div");
         element.classList.add("col-sm-2");
         element.innerHTML =
-            data[i].price + " €" + '<br>' +
-            data[i].title + '<br>' +
+            '<p class="price">' + data[i].price + " €" + '</p>' + '<br>' +
+            '<p>' + data[i].title + '</p>' + '<br>' +
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">';
         mainContainer.appendChild(element);
     }
