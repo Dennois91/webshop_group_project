@@ -3,11 +3,18 @@ body {
     /* border: 1px solid #007e00; */
 }
 
-main .col-sm {
+header {
+    box-shadow: #0000003F 0 14px 28px, #00000038 0 10px 10px;
+}
+
+header nav {
+    padding: 20px;
+}
+
+main .col-sm-2 {
     text-align: center;
     margin: 20px;
     padding-top: 20px;
-    min-height: 400px;
     max-width: 400px;
     background-color: white;
     border-radius: 8px;
@@ -15,16 +22,13 @@ main .col-sm {
     box-shadow: #00000033 0 12px 28px 0, #00000019 0 2px 4px 0, #FFFFFF0C 0 0 0 1px inset;
 }
 
-main img {
-    padding-top: 10px;
-    width: 250px;
-    height: 250px;
-    object-fit: contain;
-    border-radius: 8px;
+main .img-fluid {
+    padding: 10px 30px;
+    max-height: 200px;
 }
 
 main {
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 
