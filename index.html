@@ -6,6 +6,7 @@
     <meta name="description" content="Discover the latest trends in fashion at our online store.
     Shop stylish clothing, shoes, and accessories for men, women, and kids. Enjoy high-quality items at affordable prices.">
     <title>Bootstrap demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <link rel="icon" type="image/png" href="images/favicon.ico">
     <link rel="icon" type="image/png" href="images/favicon.ico" sizes="32x32">
@@ -13,7 +14,6 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
 </head>
 
 
@@ -31,72 +31,15 @@
 <main class="container-fluid flex-grow-1">
     <div class="container">
         <h2 class="text-center">Products</h2>
-    </div>
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 1" class="img-fluid">
+
+        <div id="getProductImages" class="row"> <!-- gets products with JS -->
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 2" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 3" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 4" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 5" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 6" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 7" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 8" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 9" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 10" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 11" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 12" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 13" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 14" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 15" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 16" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 17" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 18" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 19" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 text-center">
-            <img src="images/placeholder.png" alt="Product 20" class="img-fluid">
-        </div>
+
     </div>
 </main>
 
 <footer class="bg-light py-3">
+    <hr>
     <div class="container">
         <div class="col text-center">
             <p>&copy; 2023 Webshop Group Project. All rights reserved.</p>
@@ -109,13 +52,6 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
-
-<style>
-
-    body {
-        border: 1px solid #007e00;
-    }
-
-</style>

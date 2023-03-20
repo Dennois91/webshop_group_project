@@ -1,0 +1,30 @@
+
+body {
+    /* border: 1px solid #007e00; */
+}
+
+main .col-sm {
+    text-align: center;
+    margin: 20px;
+    padding-top: 20px;
+    min-height: 350px;
+    max-width: 400px;
+    background-color: #e1e1e1;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: #00000033 0 12px 28px 0, #00000019 0 2px 4px 0, #FFFFFF0C 0 0 0 1px inset;
+}
+
+main img {
+    padding-top: 10px;
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+main {
+    margin-bottom: 20px;
+}
+
+
