@@ -26,7 +26,6 @@ function appendImages(data) {
             '<p>' + data[i].title + '</p>' + '<br>' +
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' +
             '</div>';
-
         mainContainer.appendChild(element);
     }
 }

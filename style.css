@@ -13,8 +13,9 @@ header nav {
 
 main .product-box {
     text-align: center;
-    margin: 20px;
-    max-width: 400px;
+    margin-bottom: 20px;
+    padding: 20px;
+    height: 95%;
     background-color: white;
     border-radius: 8px;
     font-weight: bold;
