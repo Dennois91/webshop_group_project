@@ -3,7 +3,7 @@
 
 
 //function fetchAllProducts() {
-    fetch('https://fakestoreapi.com/products') // TODO: Sätt in i en funktion, så att alla pages inte behöver ladda ner produkterna.
+    fetch('https://fakestoreapi.com/products')
         .then(function (response) {
             return response.json();
         })
