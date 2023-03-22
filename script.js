@@ -33,7 +33,9 @@ function appendPreviews(data) {
             '<p class="title">' + data[i].title + '</p>' + '<br>' +
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' + '<br>' +
             '<p class="description">' + data[i].description + '</p>' +
-            '<div class="modal-footer"> <button class="btn btn-primary align-content-center"></button></div> ' +
+            '<div class="modal-footer justify-content-center"> ' +
+            '<button class="btn btn-primary opacity-90 col-2 mx-3 id=order-button">Order</button> ' +
+            '<button class="btn btn-danger opacity-90 col-2 mx-3 id=exit-button">Exit</button></div> ' +
             '</div>' +
             '</div>' +
             '</div>' +
