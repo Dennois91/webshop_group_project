@@ -17,12 +17,12 @@ function appendPreviews(data) {
         const element = document.createElement("div");
         element.classList.add("col-xl-3", "col-lg-4", "col-md-6", "col-sm-12");
         element.innerHTML =
-            '<button class="product-button" data-bs-toggle="modal"' +
+            '<div class="product-button" data-bs-toggle="modal"' +
             ' data-bs-target="#product-modal-' + i + '">' +
             '<p class="price">' + data[i].price + " €" + '</p>' + '<br>' +
             '<p>' + data[i].title + '</p>' + '<br>' +
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' +
-            '</button>' +
+            '</div>' +
             '<div class="modal fade modal-xl" id="product-modal-' + i + '">' +
             '<div class="modal-dialog modal-dialog-centered">' +
             '<div class="modal-content">' +
