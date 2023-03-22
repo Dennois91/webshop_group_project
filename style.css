@@ -11,6 +11,7 @@ header nav {
     padding: 20px;
 }
 
+
 main .product-button {
     text-align: center;
     margin-bottom: 20px;
@@ -45,7 +46,10 @@ main .img-fluid {
 }
 
 main {
-    margin: 20px;
+    margin-top: 10px;
+    overflow-y: scroll;
 }
-
+footer hr {
+    margin-top: 10px;
+}
 
