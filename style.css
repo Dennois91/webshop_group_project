@@ -30,6 +30,10 @@ header nav {
     max-height: 200px;
 }
 
+.product-modal img{
+    max-height: 400px;
+}
+
 .product-button:hover {
     background-color: #f5f5f5;
 }
