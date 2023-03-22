@@ -17,22 +17,25 @@ function appendPreviews(data) {
         const element = document.createElement("div");
         element.classList.add("col-xl-3", "col-lg-4", "col-md-6", "col-sm-12");
         element.innerHTML =
-            '<button class="product-button" data-bs-toggle="modal"' +
+            '<div class="product-button" data-bs-toggle="modal"' +
             ' data-bs-target="#product-modal-' + i + '">' +
             '<p class="price">' + data[i].price + " €" + '</p>' + '<br>' +
             '<p>' + data[i].title + '</p>' + '<br>' +
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' +
-            '</button>' +
+            '</div>' +
             '<div class="modal fade modal-xl" id="product-modal-' + i + '">' +
             '<div class="modal-dialog modal-dialog-centered">' +
             '<div class="modal-content">' +
             '<div class="modal-body">' +
             '<div class="product-modal">' +
             '<h1 class="price">' + data[i].price + " €" + '</h1>' + '<br>' +
-            '<p class="category">' + data[i].category + '</p>' + '<br>' +
-            '<p class="title">' + data[i].title + '</p>' + '<br>' +
+            //'<p class="category">' + data[i].category + '</p>' + '<br>' +
+            '<h2 class="title">' + data[i].title + '</h2>' + '<br>' +
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' + '<br>' +
             '<p class="description">' + data[i].description + '</p>' +
+            '<div class="modal-footer justify-content-center"> ' +
+            '<button class="btn btn-primary opacity-90 col-2 mx-3" id="order-button">Order</button> ' +
+            '<button class="btn btn-danger opacity-90 col-2 mx-3" data-bs-dismiss="modal">Exit</button></div> ' +
             '</div>' +
             '</div>' +
             '</div>' +
