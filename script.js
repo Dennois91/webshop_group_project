@@ -33,6 +33,7 @@ function appendPreviews(data) {
             '<p class="title">' + data[i].title + '</p>' + '<br>' +
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' + '<br>' +
             '<p class="description">' + data[i].description + '</p>' +
+            '<div class="modal-footer"> <button class="btn btn-primary align-content-center"></button></div> ' +
             '</div>' +
             '</div>' +
             '</div>' +
