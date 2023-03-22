@@ -29,8 +29,8 @@ function appendPreviews(data) {
             '<div class="modal-body">' +
             '<div class="product-modal">' +
             '<h1 class="price">' + data[i].price + " €" + '</h1>' + '<br>' +
-            '<p class="category">' + data[i].category + '</p>' + '<br>' +
-            '<p class="title">' + data[i].title + '</p>' + '<br>' +
+            //'<p class="category">' + data[i].category + '</p>' + '<br>' +
+            '<h2 class="title">' + data[i].title + '</h2>' + '<br>' +
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' + '<br>' +
             '<p class="description">' + data[i].description + '</p>' +
             '<div class="modal-footer justify-content-center"> ' +
