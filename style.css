@@ -4,6 +4,7 @@ body {
 
 header {
     box-shadow: #0000003F 0 14px 28px, #00000038 0 10px 10px;
+    margin-bottom: 20px;
 }
 
 header nav {
