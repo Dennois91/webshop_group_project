@@ -19,7 +19,7 @@ function appendPreviews(data) {
         element.innerHTML =
             '<div class="product-button" data-bs-toggle="modal"' +
             ' data-bs-target="#product-modal-' + i + '">' +
-            '<p class="price">' + data[i].price + " €" + '</p>' + '<br>' +
+            '<p class="preview-price">' + data[i].price + " €" + '</p>' + '<br>' +
             '<p>' + data[i].title + '</p>' + '<br>' +
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' +
             '</div>' +
@@ -28,7 +28,7 @@ function appendPreviews(data) {
             '<div class="modal-content">' +
             '<div class="modal-body">' +
             '<div class="product-modal">' +
-            '<h1 class="price">' + data[i].price + " €" + '</h1>' + '<br>' +
+            '<h1 class="title">' + data[i].price + " €" + '</h1>' + '<br>' +
             //'<p class="category">' + data[i].category + '</p>' + '<br>' +
             '<h2 class="title">' + data[i].title + '</h2>' + '<br>' +
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' + '<br>' +
