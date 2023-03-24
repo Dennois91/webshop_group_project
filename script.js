@@ -42,6 +42,14 @@ function appendPreviews(data) {
             '</div>' +
             '</div>';
         mainContainer.appendChild(element);
+
+        const button = element.querySelector('#order-button-' + i);
+        button.addEventListener('click', function () {
+            const product = data[i];
+        })
+
+       // TODO: Skicka produkten till bekräftelsesidan
+
     }
 }
 
