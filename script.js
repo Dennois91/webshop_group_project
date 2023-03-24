@@ -13,7 +13,7 @@ function fetchAllProducts() {
 
 function appendPreviews(data) {
     const mainContainer = document.getElementById("getProductPreviews");
-    for (let i = 1; i < data.length + 1; i++) {
+    for (let i = 0; i < data.length; i++) {
         const element = document.createElement("div");
         element.classList.add("col-xl-3", "col-lg-4", "col-md-6", "col-sm-12");
         element.innerHTML =
@@ -34,7 +34,7 @@ function appendPreviews(data) {
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' + '<br>' +
             '<p class="description">' + data[i].description + '</p>' +
             '<div class="modal-footer justify-content-center"> ' +
-            '<button class="btn btn-primary opacity-90 col-2 mx-3" onclick="openOrderPage(this.id)" id="' + (i) +
+            '<button class="btn btn-primary opacity-90 col-2 mx-3" onclick="openOrderPage(this.id)" id="' + (i + 1) +
             '">Order</button>' +
             '<button class="btn btn-danger opacity-90 col-2 mx-3" data-bs-dismiss="modal">Exit</button></div> ' +
             '</div>' +
