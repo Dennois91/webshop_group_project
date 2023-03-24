@@ -70,11 +70,11 @@ function appendProduct(data) {
     element.classList.add("product");
     element.innerHTML =
         '<div class="product-box">' +
-        '<p class="price">' + data.price + " €" + '</p>' + '<br>' +
-        '<p class="category">' + data.category + '</p>' + '<br>' +
-        '<p class="title">' + data.title + '</p>' + '<br>' +
+        '<h1 class="price">' + data.price + " €" + '</h1>' + '<br>' +
+        // '<p class="category">' + data.category + '</p>' + '<br>' +
+        '<h2 class="title">' + data.title + '</h2>' + '<br>' +
         '<img src=' + data.image + ' class="img-fluid" alt="product-picture">' + '<br>' +
-        '<p class="description">' + data.description + '</p>' +
+        // '<p class="description">' + data.description + '</p>' +
         '</div>';
     mainContainer.appendChild(element);
 }
