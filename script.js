@@ -74,7 +74,7 @@ function appendProduct(data) {
         // '<p class="category">' + data.category + '</p>' + '<br>' +
         '<h2 class="title">' + data.title + '</h2>' + '<br>' +
         '<img src=' + data.image + ' class="img-fluid" alt="product-picture">' + '<br>' +
-        '<p class="description">' + data.description + '</p>' +
+        // '<p class="description">' + data.description + '</p>' +
         '</div>';
     mainContainer.appendChild(element);
 }
