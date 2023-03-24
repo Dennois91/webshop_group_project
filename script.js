@@ -34,8 +34,8 @@ function appendPreviews(data) {
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' + '<br>' +
             '<p class="description">' + data[i].description + '</p>' +
             '<div class="modal-footer justify-content-center"> ' +
-            '<button class="btn btn-primary opacity-90 col-2 mx-3" id="order-button-' + i + '">Order</button> ' +
-            '<button class="btn btn-danger opacity-90 col-2 mx-3" data-bs-dismiss="modal">Exit</button></div> ' +
+            '<button class="btn btn-primary opacity-90 col-6 mx-3" id="order-button-' + i + '">Order</button> ' +
+            '<button class="btn btn-danger opacity-90 col-6 mx-3" data-bs-dismiss="modal">Exit</button></div> ' +
             '</div>' +
             '</div>' +
             '</div>' +
@@ -46,6 +46,7 @@ function appendPreviews(data) {
         const button = element.querySelector('#order-button-' + i);
         button.addEventListener('click', function () {
             const product = data[i];
+            console.log(product)
         })
 
        // TODO: Skicka produkten till bekräftelsesidan
