@@ -16,7 +16,7 @@
 </head>
 
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100" onload="fetchProduct()">
 <header class="container-fluid p-0 bg-primary bg-opacity-50">
     <img class="img-fluid" src="images/brand.png" alt="Brand">
     <div class="container-fluid align-content-center bg-opacity-50 bg-primary">
@@ -34,7 +34,8 @@
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title"> Här ska den vara</h2>
+                        <div id="getProduct"> <!-- get product with JS -->
+                        </div>
                     </div>
                 </div>
             </div>

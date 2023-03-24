@@ -38,6 +38,14 @@ header img{
     max-height: 400px;
 }
 
+.product-box img{
+    max-height: 300px;
+}
+
+.product-box{
+
+}
+
 .product-button:hover {
     background-color: #f5f5f5;
 }

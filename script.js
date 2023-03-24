@@ -13,7 +13,7 @@ function fetchAllProducts() {
 
 function appendPreviews(data) {
     const mainContainer = document.getElementById("getProductPreviews");
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 1; i < data.length + 1; i++) {
         const element = document.createElement("div");
         element.classList.add("col-xl-3", "col-lg-4", "col-md-6", "col-sm-12");
         element.innerHTML =
@@ -34,7 +34,8 @@ function appendPreviews(data) {
             '<img src=' + data[i].image + ' class="img-fluid" alt="product-picture">' + '<br>' +
             '<p class="description">' + data[i].description + '</p>' +
             '<div class="modal-footer justify-content-center"> ' +
-            '<button class="btn btn-primary opacity-90 col-2 mx-3" id="order-button-' + i + '">Order</button> ' +
+            '<button class="btn btn-primary opacity-90 col-2 mx-3" onclick="openOrderPage(this.id)" id="' + (i) +
+            '">Order</button>' +
             '<button class="btn btn-danger opacity-90 col-2 mx-3" data-bs-dismiss="modal">Exit</button></div> ' +
             '</div>' +
             '</div>' +
@@ -45,8 +46,13 @@ function appendPreviews(data) {
     }
 }
 
-function fetchProduct(id) {
-    fetch('https://fakestoreapi.com/products/' + id)
+function openOrderPage(id) {
+    sessionStorage.setItem("idToOrder", id);
+    window.open("order.html",'_self');
+}
+
+function fetchProduct() {
+    fetch('https://fakestoreapi.com/products/' + sessionStorage.getItem("idToOrder"))
         .then(function (response) {
             return response.json();
         })
@@ -73,7 +79,7 @@ function appendProduct(data) {
     mainContainer.appendChild(element);
 }
 
-
+/* --------------------------------- order --------------------------------- */
 
 let formNamn = document.getElementById("namn")
 let formEmail = document.getElementById("email")
@@ -114,7 +120,7 @@ function validateEmail(email) {
 function validateTelefon(telefon) {
     let regExp = /[a-öA-Ö]/i;
 
-    if(regExp.test(telefon) || telefon.length > 50){
+    if (regExp.test(telefon) || telefon.length > 50) {
         alert("Telefonnummer får inte innehålla några" +
             " bokstäver eller vara längre än 50 karaktärer")
         validationStatus += 1
