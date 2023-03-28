@@ -81,30 +81,66 @@ function appendProduct(data) {
 
 /* --------------------------------- order --------------------------------- */
 
-let formNamn = document.getElementById("namn")
-let formEmail = document.getElementById("email")
-let formTelefon = document.getElementById("telefon")
-let formAdress = document.getElementById("adress")
-let formOrt = document.getElementById("ort")
-let formPostNr = document.getElementById("postnr")
-let knappKöp = document.getElementById("knappköp")
+let formName = document.getElementById("nameForm")
+let formEmail = document.getElementById("emailForm")
+let formPhone = document.getElementById("phoneForm")
+let formAddress = document.getElementById("addressForm")
+let formCity = document.getElementById("cityForm")
+let formZip = document.getElementById("zipForm")
+let buyButton = document.getElementById("buttonBuy")
 let validationStatus = 0
 
-knappKöp.addEventListener("click", function () {
-    validateName(formNamn.value)
+buyButton.addEventListener("click", function (event) {
+    event.preventDefault()
+    validateName(formName.value)
     validateEmail(formEmail.value)
-    validateTelefon(formTelefon.value)
-    validateAdress(formAdress.value)
-    validateOrt(formOrt.value)
-    validatePostNr(formPostNr.value)
+    validatePhone(formPhone.value)
+    validateAddress(formAddress.value)
+    validateCity(formCity.value)
+    validateZip(formZip.value)
+    console.log(validationStatus)
+    console.log(formName.value)
+    console.log(formEmail.value)
+    console.log(formPhone.value)
+    console.log(formAddress.value)
+    console.log(formCity.value)
+    console.log(formZip.value)
 
     if (validationStatus === 0) {
-        //window.location.replace("index.html");
+        console.log("Success")
+        let obj = {
+            customerName: formName.value,
+            customerEmail: formEmail.value,
+            customerPhone: formPhone.value,
+            customerAddress: formAddress.value,
+            customerCity: formCity.value,
+            customerZip: formZip.value
+        }
+        let objJSON = JSON.stringify(obj)
+        localStorage.setItem("localCustomerData", objJSON)
+        window.open("confirmation.html",'_self');
+    } else {
+        console.error("Error")
     }
+    validationStatus = 0
 })
 
-function validateName(namn) {
-    if (namn.length < 2 || namn.length > 50) {
+function loadAndClearInfo() {
+    let customerDataJSON = localStorage.getItem("localCustomerData")
+    let customerData = JSON.parse(customerDataJSON)
+    let displayInfo = document.getElementById("orderconf")
+    displayInfo.innerHTML = '<h2 id="confhead">Orderbekräftelse</h2>\n' +
+        '<h4> Namn: ' + customerData.customerName + '</h4>\n' +
+        '<h4> Mailadresss: ' + customerData.customerEmail + '</h4>\n' +
+        '<h4> Telefonnummer: ' + customerData.customerPhone + '</h4>\n' +
+        '<h4> Gatuadress: ' + customerData.customerAddress + '</h4>\n' +
+        '<h4> Ort: ' + customerData.customerCity + '</h4>\n' +
+        '<h4> Postnummer: ' + customerData.customerZip + '</h4>'
+    localStorage.removeItem("localCustomerData")
+}
+
+function validateName(name) {
+    if (name.length < 2 || name.length > 50) {
         alert("Namn måste innehålla mellan 2 och 50 karaktärer")
         validationStatus += 1
     }
@@ -117,32 +153,32 @@ function validateEmail(email) {
     }
 }
 
-function validateTelefon(telefon) {
+function validatePhone(phone) {
     let regExp = /[a-öA-Ö]/i;
 
-    if (regExp.test(telefon) || telefon.length > 50) {
-        alert("Telefonnummer får inte innehålla några" +
+    if (regExp.test(phone) || phone.length > 50 || phone.length === 0) {
+        alert("Telefonnummer får inte vara tomt eller innehålla några" +
             " bokstäver eller vara längre än 50 karaktärer")
         validationStatus += 1
     }
 }
 
-function validateAdress(adress) {
-    if (adress.length < 4 || adress.length > 50) {
+function validateAddress(address) {
+    if (address.length < 4 || address.length > 50) {
         alert("Adress måste vara mellan 4 och 50 karaktärer")
         validationStatus += 1
     }
 }
 
-function validateOrt(ort) {
-    if (ort.length < 2 || ort.length > 50) {
+function validateCity(city) {
+    if (city.length < 2 || city.length > 50) {
         alert("Ort måste vara mellan 2 och 50 karaktärer")
         validationStatus += 1
     }
 }
 
-function validatePostNr(postnr) {
-    if (postnr.length > 6 || postnr[3] !== " ") {
+function validateZip(zip) {
+    if (zip.length > 6 || zip[3] !== " ") {
         alert("Postnummer ska skrivas på format xxx xx")
         validationStatus += 1
     }
