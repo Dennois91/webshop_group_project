@@ -11,9 +11,10 @@ header nav {
     padding: 20px;
 }
 
-header img{
+header img {
     max-height: 120px
 }
+
 .product-button {
     text-align: center;
     padding: 20px 20px 40px;
@@ -34,16 +35,27 @@ header img{
     max-height: 200px;
 }
 
-.product-modal img{
+.product-modal img {
     max-height: 400px;
 }
 
-.product-box img{
-    max-height: 300px;
+.product-box img {
+    max-height: 200px;
 }
 
-.product-box{
+.product-box {
+    text-align: center;
+}
 
+.center {
+    margin: auto;
+    padding-bottom: 30px;
+    max-width: 800px;
+}
+
+.card {
+    box-shadow: #0000003F 0 14px 28px, #00000038 0 10px 10px;
+    border-radius: 8px;
 }
 
 .product-button:hover {
@@ -65,12 +77,25 @@ footer hr {
     margin-top: 10px;
 }
 
+.form-group {
+    margin: 20px;
+    box-shadow: #0000003F 0 14px 28px, #00000038 0 10px 10px;
+    border-radius: 8px;
+}
+
+form {
+    text-align: center
+}
+
+.order-confirm {
+    text-align: center;
+}
+
 #orderconf {
     margin: 1.5%;
     margin-top: 0.5%;
 }
 
-#orderconf h4{
+#orderconf h4 {
     margin: 1%;
 }
-

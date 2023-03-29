@@ -48,7 +48,7 @@ function appendPreviews(data) {
 
 function openOrderPage(id) {
     sessionStorage.setItem("idToOrder", id);
-    window.open("order.html",'_self');
+    window.open("order.html", '_self');
 }
 
 function fetchProduct() {
@@ -70,16 +70,14 @@ function appendProduct(data) {
     element.classList.add("product");
     element.innerHTML =
         '<div class="product-box">' +
-        '<h1 class="price">' + data.price + " €" + '</h1>' + '<br>' +
+        '<h1>' + data.price + " €" + '</h1>' + '<br>' +
         // '<p class="category">' + data.category + '</p>' + '<br>' +
-        '<h2 class="title">' + data.title + '</h2>' + '<br>' +
+        '<p>' + data.title + '</p>' + '<br>' +
         '<img src=' + data.image + ' class="img-fluid" alt="product-picture">' + '<br>' +
         // '<p class="description">' + data.description + '</p>' +
         '</div>';
     mainContainer.appendChild(element);
 }
-
-/* --------------------------------- order --------------------------------- */
 
 let formName = document.getElementById("nameForm")
 let formEmail = document.getElementById("emailForm")
@@ -118,7 +116,7 @@ buyButton.addEventListener("click", function (event) {
         }
         let objJSON = JSON.stringify(obj)
         localStorage.setItem("localCustomerData", objJSON)
-        window.open("confirmation.html",'_self');
+        window.open("confirmation.html", '_self');
     } else {
         console.error("Error")
     }
@@ -129,26 +127,38 @@ function loadAndClearInfo() {
     let customerDataJSON = localStorage.getItem("localCustomerData")
     let customerData = JSON.parse(customerDataJSON)
     let displayInfo = document.getElementById("orderconf")
-    displayInfo.innerHTML = '<h2 id="confhead">Orderbekräftelse</h2>\n' +
-        '<h4> Namn: ' + customerData.customerName + '</h4>\n' +
-        '<h4> Mailadresss: ' + customerData.customerEmail + '</h4>\n' +
-        '<h4> Telefonnummer: ' + customerData.customerPhone + '</h4>\n' +
-        '<h4> Gatuadress: ' + customerData.customerAddress + '</h4>\n' +
-        '<h4> Ort: ' + customerData.customerCity + '</h4>\n' +
-        '<h4> Postnummer: ' + customerData.customerZip + '</h4>'
+    displayInfo.innerHTML =
+        '<div class="order-confirm">' +
+        '<h2 id="confhead">Order Confirmation</h2>' +
+        '<br>' +
+        '</div>' +
+        '<div class="center">' +
+        '<p>Name:</p>' +
+        '<h4>' + customerData.customerName + '</h4>' +
+        '<p>E-mail:</p>' +
+        '<h4>' + customerData.customerEmail + '</h4>' +
+        '<p>Phone:</p>' +
+        '<h4>' + customerData.customerPhone + '</h4>' +
+        '<p>Address:</p>' +
+        '<h4>' + customerData.customerAddress + '</h4>' +
+        '<p>Locality:</p>' +
+        '<h4>' + customerData.customerCity + '</h4>' +
+        '<p>Zip-code:</p>' +
+        '<h4>' + customerData.customerZip + '</h4>' +
+        '</div>'
     localStorage.removeItem("localCustomerData")
 }
 
 function validateName(name) {
     if (name.length < 2 || name.length > 50) {
-        alert("Namn måste innehålla mellan 2 och 50 karaktärer")
+        alert("Name must be between 2-50 characters.")
         validationStatus += 1
     }
 }
 
 function validateEmail(email) {
     if (!email.includes("@") && email.length > 50) {
-        alert("Email måste innehålla @ och vara kortare än 50 karaktärer")
+        alert("E-mail must contain @, max 50 characters")
         validationStatus += 1
     }
 }
@@ -157,29 +167,28 @@ function validatePhone(phone) {
     let regExp = /[a-öA-Ö]/i;
 
     if (regExp.test(phone) || phone.length > 50 || phone.length === 0) {
-        alert("Telefonnummer får inte vara tomt eller innehålla några" +
-            " bokstäver eller vara längre än 50 karaktärer")
+        alert("Phone number may only contain digits and max 50.")
         validationStatus += 1
     }
 }
 
 function validateAddress(address) {
     if (address.length < 4 || address.length > 50) {
-        alert("Adress måste vara mellan 4 och 50 karaktärer")
+        alert("Address must be between 4-50 characters.")
         validationStatus += 1
     }
 }
 
 function validateCity(city) {
     if (city.length < 2 || city.length > 50) {
-        alert("Ort måste vara mellan 2 och 50 karaktärer")
+        alert("Locality must be between 2-50 characters.")
         validationStatus += 1
     }
 }
 
 function validateZip(zip) {
     if (zip.length > 6 || zip[3] !== " ") {
-        alert("Postnummer ska skrivas på format xxx xx")
+        alert("Zip code must be in this format: xxx xx")
         validationStatus += 1
     }
 }
