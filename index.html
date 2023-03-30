@@ -18,58 +18,57 @@
 <header class="container-fluid p-0 bg-primary bg-opacity-50">
     <img class="img-fluid" src="images/brand.png" alt="Brand">
 
-         <div class="container-fluid align-content-center bg-opacity-50 bg-primary">
-              <nav class="d-flex justify-content-center">
-                  <a href="index.html" class="btn btn-primary opacity-90 col-6 mx-3">Home</a>
-                  <button class="btn btn-primary opacity-90 col-6 mx-3" data-bs-toggle="modal"
-                          data-bs-target="#modal">Contact
-                  </button>
-                  <!-- <a href="contact.html" class="btn btn-primary opacity-90 col-2 mx-3">Contact</a> -->
-                  <!-- <a href="cart.html" class="btn btn-primary">Cart</a> -->
+    <div class="container-fluid align-content-center bg-opacity-50 bg-primary">
+        <nav class="d-flex justify-content-center">
+            <a href="index.html" class="btn btn-primary opacity-90 col-6 mx-3">Home</a>
+            <button class="btn btn-primary opacity-90 col-6 mx-3" data-bs-toggle="modal"
+                    data-bs-target="#modal">Contact
+            </button>
+            <!-- <a href="contact.html" class="btn btn-primary opacity-90 col-2 mx-3">Contact</a> -->
+            <!-- <a href="cart.html" class="btn btn-primary">Cart</a> -->
 
-    </nav>
-    <div class="modal fade modal-lg" id="modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1> Contact us here</h1>
-                </div>
-                <div class="modal-body">
-                    <p> If you have any questions or comments, please feel free to contact us using the form
-                        below: </p>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email address:</label>
-                            <input type="email" class="form-control" id="email"
-                                   placeholder="Enter your email address">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea class="form-control" id="message" rows="5"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary opacity-90 col-12 float-end mt-3">Submit</button>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <div class="container">
-                        <div class="col text-center">
-                            <p>&copy; 2023 Webshop Group Project. All rights reserved.</p>
+        </nav>
+        <div class="modal fade modal-lg" id="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1> Contact us here</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p> If you have any questions or comments, please feel free to contact us using the form
+                            below: </p>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email"
+                                       placeholder="Enter your email address">
+                            </div>
+                            <div class="form-group">
+                            <textarea class="form-control" id="message" rows="5"
+                                      placeholder="Enter your message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary opacity-90 col-12 float-end mt-3">Submit
+                            </button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container">
+                            <div class="col text-center">
+                                <p>&copy; 2023 Webshop Group Project. All rights reserved.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
 </header>
 
 <main class="container-fluid flex-grow-1">
     <div class="container">
-     <!--   <h2 class="text-center">Products</h2> -->
+        <!--   <h2 class="text-center">Products</h2> -->
         <div id="getProductPreviews" class="row"> <!-- gets products with JS -->
         </div>
     </div>
